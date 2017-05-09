@@ -20,16 +20,14 @@ function Adjust(deposit, withdraw) {
 }
 
 Adjust.prototype.newBalance = function () {
-  if (this.deposit != 0 && this.withdraw != 0) {
+  if (this.deposit) {
     balance += this.deposit;
+  }if (this.withdraw) {
     balance -= this.withdraw;
 
-  // }else if(this.withdraw == NaN && this.deposit != NaN) {
-  //   balance += this.deposit;
-  // }else if(this.withdraw != NaN && this.deposit == NaN) {
-  //   balance -= this.withdraw;
   }return balance;
 }
+
 
 
 // UI Logic
